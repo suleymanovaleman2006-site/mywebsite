@@ -1,0 +1,53 @@
+/* Basic responsive styles for the personal site */
+:root{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --muted:#6b7280;
+  --max-width:1000px;
+}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:#111}
+.site-header{background:var(--card);border-bottom:1px solid #e6e9ef}
+.nav{display:flex;gap:1rem;padding:0.75rem 1rem;max-width:var(--max-width);margin:0 auto;align-items:center}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a[aria-current]{color:var(--accent);font-weight:600}
+.container{max-width:var(--max-width);margin:2rem auto;padding:0 1rem}
+.profile{display:flex;gap:1.5rem;align-items:center;background:var(--card);padding:1.25rem;border-radius:8px;box-shadow:0 1px 2px rgba(16,24,40,0.04)}
+.profile-photo img{width:120px;height:120px;border-radius:50%;display:block;border:4px solid #fff;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.profile-info h1{margin:0 0 0.25rem 0;font-size:1.5rem}
+.profile-info p{margin:0 0.75rem 0.75rem 0;color:var(--muted)}
+.links{list-style:none;padding:0;margin:0;display:flex;gap:0.75rem}
+.links a{color:var(--accent);text-decoration:none}
+.projects{margin-top:1.25rem}
+.project-item{background:linear-gradient(180deg,rgba(37,99,235,0.04),transparent);padding:0.5rem;border-radius:6px}
+
+/* Hero and layout */
+.hero{display:flex;gap:1.25rem;align-items:center;background:linear-gradient(180deg,#fff, #fbfdff);padding:1.25rem;border-radius:8px}
+.hero-photo img{width:140px;height:140px;border-radius:50%;display:block}
+.hero-text h1{margin:0;font-size:1.6rem}
+.lead{color:var(--muted);margin-top:0.5rem}
+.btn{display:inline-block;padding:0.5rem 0.8rem;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;margin-right:0.5rem}
+.btn-ghost{background:transparent;border:1px solid #dbeafe;color:var(--accent)}
+.spacer{flex:1}
+.social{display:flex;gap:0.5rem;align-items:center}
+.icon-link img{width:20px;height:20px;display:block}
+
+/* Projects */
+.projects-list{margin-top:1rem}
+.project-card{display:flex;gap:1rem;align-items:center;padding:0.75rem;border-radius:8px;background:#fff;margin-bottom:0.75rem}
+.project-thumb{width:140px;height:80px;object-fit:cover;border-radius:6px}
+
+@media (max-width:760px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .project-card{flex-direction:column;align-items:flex-start}
+  .project-thumb{width:100%;height:auto}
+}
+
+@media (max-width:640px){
+  .profile{flex-direction:column;align-items:flex-start}
+  .profile-photo img{width:96px;height:96px}
+}
+
+.site-footer{max-width:var(--max-width);margin:1.5rem auto;padding:0 1rem;color:var(--muted)}
+
